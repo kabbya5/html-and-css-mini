@@ -29,10 +29,11 @@ a {
 .relative:after {
   content: "";
   width: 100%;
-  height: 0;
+  height: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
+  clip-path: circle(5% at 1rem 90%);
   animation: changeBg 10s infinite;
   z-index: 1;
 }
@@ -40,23 +41,23 @@ a {
 @keyframes changeBg {
   0% {
     background-color: red;
-    height: 15%;
+    clip-path: circle(15% at 1rem 90%);
   }
   25% {
     background-color: yellow;
-    height: 25%;
+    clip-path: circle(50% at 3rem 90%);
   }
   50% {
     background-color: blue;
-    height: 50%;
+    clip-path: circle(90% at 5rem 90%);
   }
   75% {
     background-color: green;
-    height: 75%;
+    clip-path: circle(120% at 4rem 90%);
   }
   100% {
     background-color: red;
-    height: 100%;
+    clip-path: circle(140% at 4rem 90%);
   }
 }
 </style>
